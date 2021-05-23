@@ -402,12 +402,24 @@
   
 
 // ============TASK35===========
-
+// function checkForName(fullName, name) {
+//     const result = fullName.includes(name) ; // Change this line
+//      return result;
+//    }
+   
 
 // ============TASK36===========
-
-
-
+// function checkForSpam(message) {
+//     let result;
+//     let up; 
+//     // Change code below this line
+//     normalizeMessage = message.toLowerCase();
+//     result = normalizeMessage.includes ('spam') || normalizeMessage.includes ('sale');
+  
+//     // Change code above this line
+//     return result;
+//   }
+  
 // ============Module2===========
 
 // ============TASK1============
