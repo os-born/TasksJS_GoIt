@@ -411,7 +411,7 @@
 // ============TASK36===========
 // function checkForSpam(message) {
 //     let result;
-//     let up; 
+//     let normalizeMessage; 
 //     // Change code below this line
 //     normalizeMessage = message.toLowerCase();
 //     result = normalizeMessage.includes ('spam') || normalizeMessage.includes ('sale');
