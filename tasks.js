@@ -423,7 +423,26 @@
 // ============Module2===========
 
 // ============TASK1============
+// function checkAge(age) {
+//     if (age>=18) { // Change this line
+//       return "You are an adult";
+//     }
+  
+//     return "You are a minor";
+//   }
+
 // ============TASK2============
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = "jqueryismyjam";
+//     // Change code below this line
+//   if (password === ADMIN_PASSWORD){
+    
+//     return "Welcome!"}
+//     return "Access denied, wrong password!"
+//     // Change code above this line
+//   }
+  
+
 // ============TASK3============
 // ============TASK4============
 // ============TASK5============
