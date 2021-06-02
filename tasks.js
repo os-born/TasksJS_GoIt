@@ -491,8 +491,280 @@
 // const lastElement = fruits[lastElementIndex];
 
 // ============TASK9============
+// function getExtremeElements(array) {
+//     // Change code below this line
+//     let restElements = [array[0], array[array.length-1]]
+//    return restElements;
+//     // Change code above this line
+//   }
+
+// ============TASK10===========
+// function splitMessage(message, delimeter) {
+//     let words;
+//     // Change code below this line
+//     words = message.split(delimeter);
+//     // Change code above this line
+//     return words;
+//   }
+  
+// ============TASK11===========
+// function calculateEngravingPrice(message, pricePerWord) {
+//     // Change code below this line
+//    const words = message.split(' ');
+//    const totalPrice = words.length*pricePerWord;
+//  return totalPrice;
+//     // Change code above this line
+//  }
+
+// ============TASK12===========
+// function makeStringFromArray(array, delimeter) {
+//     let string;
+//     // Change code below this line
+//   string = array.join(delimeter);
+//     // Change code above this line
+//     return string;
+//   }
+
+// ============TASK13===========
+// function slugify(title) {
+//     // Change code below this line
+//   const normalizeTitle = title.toLowerCase();
+//   const array = normalizeTitle.split(' ');
+//   const addDelimeter = array.join('-')
+//   return addDelimeter;
+//     // Change code above this line
+//   }
+
+// ============TASK14===========
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// // Change code below this line
+// const firstTwoEls = fruits.slice(0,2);
+// const nonExtremeEls = fruits.slice(1,fruits.length-1);
+// const lastThreeEls = fruits.slice(-3);
+
+// ============TASK15===========
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+
+// const allClients = oldClients.concat(newClients); // Change this line
+
+// ============TASK16===========
+// function makeArray(firstArray, secondArray, maxLength) {
+//     let newArray = firstArray.concat(secondArray)
+    
+//     if (newArray.length > maxLength){
+//       newArray = newArray.slice(0,maxLength)
+//      return newArray;
+//     }     
+//     return newArray;
+//     }
+
+// ============TASK17===========
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) { // Change this line
+//   console.log(i);
+// }
+
+// ============TASK18===========
+// function calculateTotal(number) {
+//     // Change code below this line
+//     let add = 0;
+//     for (let i = 0; i <= number; i+=1){
+//       add += i;
+//     }
+//      return add;
+//      // Change code above this line
+//    }
+
+// ============TASK19===========
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i+=1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// ============TASK20===========
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+//   for (let i = 0; i<order.length; i+=1){
+//   total += order[i]
+//   }
+//     // Change code above this line
+//     return total;
+//   }
+
+// ============TASK21===========
+// function findLongestWord(string) {
+//     // Change code below this line
+//   const arrayWords = string.split(" ");
+  
+//   let longestWord = arrayWords[0];
+  
+//   for (const arrayWord of arrayWords){
+//     if (arrayWord.length > longestWord.length){
+//           longestWord = arrayWord;}
+//     }
+//     return longestWord;
+//     // Change code above this line
+//   }
+
+// ============TASK22===========
+// function createArrayOfNumbers(min, max) {
+//     const numbers = [];
+//     // Change code below this line
+//   for (let i=min; i<=max; i+=1)
+//   numbers.push(i);
+//     // Change code above this line
+//     return numbers;
+//   }
+
+// ============TASK23===========
+// function filterArray(numbers, value) {
+//     let newArrayOfNumbers = [];
+//    for (const number of numbers){
+//     if (number > value) {
+//       newArrayOfNumbers.push(number);
+//      } 
+//    }
+//      return newArrayOfNumbers;
+//    }
+
+// ============TASK24===========
+// function checkFruit(fruit) {
+//     const fruits = ["apple", "plum", "pear", "orange"];
+  
+//     return fruits.includes(fruit) ? true : false; // Change this line
+//   }
+  
+
+// ============TASK25===========
+// function getCommonElements(array1, array2) {
+//     // Change code below this line
+//   let newArray = []
+//   for (const commonNumber of array1){
+//   if (array2.includes(commonNumber)){
+//     newArray.push(commonNumber)}
+//   }
+//   return newArray
+//    // Change code above this line
+//   }
+
+// ============TASK26===========
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+  
+//     for (const item of order) {
+//       total += item;
+//     }
+  
+//     // Change code above this line
+//     return total;
+//   }
+  
+
+// ============TASK27===========
+// function filterArray(numbers, value) {
+//     // Change code below this line
+//     const filteredNumbers = [];
+  
+//     for (const number of numbers) {
+//          if (number > value) {
+//         filteredNumbers.push(number);
+//       }
+//     }
+  
+//     return filteredNumbers;
+//     // Change code above this line
+//   }
+  
+
+// ============TASK28===========
+// Change code below this line
+// const c = 11 % 4;
+// const a = 3 % c;
+// const b = 4 % c;
+// const d = 12 % (b+c+c);
+// const e = 8 % c;
+
+// // Change code below this line
+// const a = 3 % 3;
+// const b = 4 % 3;
+// const c = 11 % 4;
+// const d = 12 % (4+3);
+// const e = 8 % 3;
 
 
+// ============TASK29===========
+
+
+// ============TASK30===========
+// ============TASK31===========
+// ============TASK32===========
+
+
+// ============Module3===========
+
+// ============TASK1============
+// ============TASK2============
+// ============TASK3============
+// ============TASK4============
+// ============TASK5============
+// ============TASK6============
+// ============TASK7============
+// ============TASK8============
+// ============TASK9============
+// ============TASK10===========
+// ============TASK11===========
+// ============TASK12===========
+// ============TASK13===========
+// ============TASK14===========
+// ============TASK15===========
+// ============TASK16===========
+// ============TASK17===========
+// ============TASK18===========
+// ============TASK19===========
+// ============TASK20===========
+// ============TASK21===========
+// ============TASK22===========
+// ============TASK23===========
+// ============TASK24===========
+// ============TASK25===========
+// ============TASK26===========
+// ============TASK27===========
+// ============TASK28===========
+// ============TASK29===========
+// ============TASK30===========
+// ============TASK31===========
+// ============TASK32===========
+// ============TASK33===========
+// ============TASK34===========
+// ============TASK35===========
+// ============TASK36===========
+// ============TASK37===========
+// ============TASK38===========
+// ============TASK39===========
+// ============TASK40===========
+// ============TASK41===========
+// ============TASK42===========
+
+
+// ============Module4===========
+
+// ============TASK1============
+// ============TASK2============
+// ============TASK3============
+// ============TASK4============
+// ============TASK5============
+// ============TASK6============
+// ============TASK7============
+// ============TASK8============
+// ============TASK9============
 // ============TASK10===========
 // ============TASK11===========
 // ============TASK12===========
