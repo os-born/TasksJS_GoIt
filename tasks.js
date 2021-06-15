@@ -645,7 +645,7 @@
 // ============TASK25===========
 // function getCommonElements(array1, array2) {
 //     // Change code below this line
-//   let newArray = []
+//   const newArray = []
 //   for (const commonNumber of array1){
 //   if (array2.includes(commonNumber)){
 //     newArray.push(commonNumber)}
@@ -1263,20 +1263,201 @@
   
 
 // ============TASK33===========
-
+// // Change code below this line
+// function findMatches(numbersArr, ...args) {
+//     const matches = []; // Don't change this line
+  
+    
+//   for (const arg of args){
+//     if (numbersArr.includes(arg)){
+//       matches.push(arg);
+//   }
+//   }
+//     // Change code above this line
+//     return matches; 
+//   }
 
 // ============TASK34===========
+// const bookShelf = {
+//     // Change code below this line
+//     books: ['The last kingdom', 'The guardian of dreams'],
+//     getBooks() {
+//       return 'Returning all books';
+//     },
+//     addBook(bookName) {
+//       return `Adding book ${bookName}`;
+//     },
+//     removeBook(bookName){
+//       return `Deleting book ${bookName}`
+//     },
+//     updateBook(oldName, newName){
+//         return `Updating book ${oldName} to ${newName}`
+//     }
+    
+//     // Change code above this line
+//   };
+  
 // ============TASK35===========
+// const bookShelf = {
+//     books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//     updateBook(oldName, newName) {
+//       // Change code below this line
+//       const bookIndex = this.books.indexOf(oldName);
+//       this.books.splice(bookIndex, 1, newName);
+//       return this.books;
+      
+//       // Change code above this line
+//     },
+//   };
+  
+
 // ============TASK36===========
+// const atTheOldToad = {
+//     // Change code below this line
+//     potions: []
+//     // Change code above this line
+//   };
+  
+
 // ============TASK37===========
+// const atTheOldToad = {
+//     // Change code below this line
+//     potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//     getPotions () {
+//       return this.potions
+//   }
+//     // Change code above this line
+//   };
+  
+
 // ============TASK38===========
+// const atTheOldToad = {
+//     potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//     addPotion(potionName) {
+//       // Change code below this line
+//       this.potions.push(potionName)
+//       // Change code above this line
+//     },
+//   };
+  
+
 // ============TASK39===========
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//     removePotion(potionName) {
+//       // Change code below this line
+//       const indexPotion = this.potions.indexOf(potionName)
+//       this.potions.splice(indexPotion, 1)
+//       // Change code above this line
+//     },
+//   };
+  
+
 // ============TASK40===========
+// const atTheOldToad = {
+//     potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//     updatePotionName(oldName, newName) {
+//       // Change code below this line
+//    const indexPotion = this.potions.indexOf(oldName);
+//    this.potions.splice(indexPotion, 1, newName);
+//       // Change code above this line
+//     },
+//   };
+  
+
 // ============TASK41===========
-// ============TASK42===========
+// const atTheOldToad = {
+//     potions: [
+//       { name: 'Speed potion', price: 460 },
+//       { name: 'Dragon breath', price: 780 },
+//       { name: 'Stone skin', price: 520 },
+//     ],
+//     // Change code below this line
+//     getPotions() {
+//       return this.potions;
+//     },
+//     addPotion(potionName) {
+//       if (this.potions.includes(potionName)) {
+//         return `Potion ${potionName} is already equipped!`;
+//       }
+  
+//       this.potions.push(potionName);
+//     },
+//     removePotion(potionName) {
+//       for (const potion of this.potions){
+//         if(potionName === potion.name){
+//       const potionIndex = this.potions.indexOf(potion);
+//           this.potions.splice(potionIndex, 1);
+//           return this.potion;
+//         };
+//         }
+//       },
+//     updatePotionName(oldName, newName) {
+//       for (const potion of this.potions){
+//       if(oldName === potion.name){
+//       potion.name=newName;
+//         return this.potions;
+//       }
+//       }
+//     },
+//     // Change code above this line
+//   };
+  
 
 
 // ============Module4===========
+
+// ============TASK1============
+// function makePizza() {
+    //     return 'Ваша пицца готовится, ожидайте.';
+    //   }
+    //   // Пиши код ниже этой строки
+      
+    //   const result = makePizza();
+    //   const pointer = makePizza;
+
+// ============TASK2============
+// function deliverPizza(pizzaName) {
+//     return `Доставляем пиццу ${pizzaName}.`;
+//   }
+  
+//   function makePizza(pizzaName) {
+//     return `Пицца ${pizzaName} готовится, ожидайте...`;
+//   }
+  
+//   // Пиши код ниже этой строки
+//   function makeMessage(pizzaName, callback) {
+//     return callback(pizzaName);
+//   }
+//   makeMessage(makePizza, deliverPizza);
+  
+// ============TASK3============
+// function makePizza(pizzaName, callback) {
+//     console.log(`Пицца ${pizzaName} готовится, ожидайте...`);
+//     callback(pizzaName);
+//   }
+  
+//   makePizza('Роял гранд', function deliverPizza(pizzaName) {
+//     console.log(`Доставляем пиццу ${pizzaName}.`);
+//   });
+//   // Пиши код ниже этой строки
+  
+//   makePizza('Ультрасыр', function eatPizza(pizzaName) {
+//     console.log(`Едим пиццу ${pizzaName}.`)});
+  
+
+// ============TASK4============
+
+
+// ============TASK5============
+// ============TASK6============
+// ============TASK7============
+// ============TASK8============
+// ============TASK9============
+// ============TASK10===========
+
+
+// ============Module5===========
 
 // ============TASK1============
 // ============TASK2============
