@@ -1529,14 +1529,605 @@
 //   console.log(customer.getOrders()); // ['Burger', 'Pizza', 'Salad', 'Steak']
 
 // ============TASK7============
+// const orders = [
+//     { email: 'solomon@topmail.ua', dish: 'Burger' },
+//     { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//     { email: 'jacob@mail.com', dish: 'Taco' },
+//   ];
+  
+//   // Пиши код ниже этой строки
+  
+//   function composeMessage(position) {
+//     return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`
+//   }
+  
+//   const messages = [];
+  
+//   for (let i=0; i<orders.length; i+=1){
+    
+//     messages.push(composeMessage.call(orders[i], i+1))
+//   }   
+//   console.log(messages)
+//   //
+  
+
+// ============TASK8============
+// const orders = [
+//     { email: "solomon@topmail.ua", dish: "Burger" },
+//     { email: "artemis@coldmail.net", dish: "Pizza" },
+//     { email: "jacob@mail.com", dish: "Taco" },
+//   ];
+  
+//   // Пиши код ниже этой строки
+//   function composeMessage(position) {
+//     return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${position}-й в очереди.`;
+//   }
+  
+//   const messages = [];
+//   for (let i = 0; i < orders.length; i++) {
+//     const msg = composeMessage.apply(orders[i], [i + 1]);
+//     messages.push(msg);
+//   }
 
 
+// ============TASK9============
+// const pizzaPalace = {
+//     company: 'Pizza Palace',
+//   };
+  
+//   const burgerShack = {
+//     company: 'Burger Shack',
+//   };
+  
+//   function composeMessage(customerName) {
+//     return `${customerName}, всегда рады вас видеть в «${this.company}».`;
+//   }
+//   // Пиши код ниже этой строки
+  
+//   const pizzaPalaceComposer = composeMessage.bind(pizzaPalace);
+//   const pizzaPalaceMessage = pizzaPalaceComposer('Манго');
+  
+//   const burgerShackComposer = composeMessage.bind(burgerShack);
+//   const burgerShackMessage = burgerShackComposer('Поли');
+  
+
+// ============TASK10===========
+// const service = {
+//     mailingList: ['mango@mail.com', 'poly@hotmail.de', 'ajax@jmail.net'],
+//     subscribe(email) {
+//       this.mailingList.push(email);
+//       return `Почта ${email} добавлена в рассылку.`;
+//     },
+//     unsubscribe(email) {
+//       this.mailingList = this.mailingList.filter((e) => e !== email);
+//       return `Почта ${email} удалена из рассылки.`;
+//     },
+//   };
+  
+//   function logAndInvokeAction(email, action) {
+//     return action(email);
+//   }
+  
+//   const firstInvoke = logAndInvokeAction('kiwi@mail.uk', service.subscribe.bind(service));
+//   console.log(firstInvoke);
+//   // Почта kiwi@mail.uk добавлена в рассылку.
+  
+//   console.log(service.mailingList);
+//   /* ['mango@mail.com', 
+//       'poly@hotmail.de', 
+//       'ajax@jmail.net', 
+//       'kiwi@mail.uk']*/
+//   const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
+//   console.log(secondInvoke);
+//   // Почта poly@hotmail.de удалена из рассылки.
+  
+//   console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
+
+// ============Module5===========
+
+// ============TASK1============
+// const parent = {
+//     name: 'Stacey',
+//     surname: 'Moore',
+//     age: 54,
+//     heritage: 'Irish'
+//   };
+//   // Пиши код ниже этой строки
+  
+//   const child = Object.create(parent);
+  
+//   // Пиши код выше этой строки
+//   child.name = 'Jason';
+//   child.age = 27;
+// ============TASK2============
+// const ancestor = {
+//     name: 'Paul',
+//     age: 83,
+//     surname: 'Dawson',
+//     heritage: 'Irish'
+//   };
+//   // Пиши код ниже этой строки
+  
+//   const parent = Object.create(ancestor);
+//   parent.name = 'Stacey';
+//   parent.surname = 'Moore';
+//   parent.age = 54;
+  
+//   const child = Object.create(parent);
+//   child.name = 'Jason';
+//   child.age = 27;
+  
+  // Пиши код выше этой строки
+
+// ============TASK3============
+// function Car(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//     }
+    
+//     const MyCar = new Car('brand', 'model', 'price')
+
+// ============TASK4============
+// function Car({brand, model, price}) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+  
+
+// ============TASK5============
+// function Car({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//     Car.prototype.getPrice = function () {
+//     return this.price};
+//     Car.prototype.changePrice = function(newPrice){
+//     this.price = newPrice};
+//   }
+  
+
+// ============TASK6============
+// function Storage(items) {
+//     this.items= items;
+//     }
+  
+//     Storage.prototype.getItems = function (items) {
+//       return this.items} ;
+      
+//     Storage.prototype.addItem = function (newItem) {
+//     this.items.push(newItem)};
+  
+//     Storage.prototype.removeItem = function (item) {
+//       for (const needItem of this.items){
+//   if(needItem === item){
+//   const needItemIndex = this.items.indexOf(needItem);
+//   this.items.splice(needItemIndex, 1);
+//   return this.items;
+//   };
+//   };
+//   }; 
+
+//   // Пиши код выше этой строки
+//   const storage = new Storage(['Нанитоиды', 'Пролонгер', 'Антигравитатор']);
+//   console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
+//   storage.addItem('Дроид');
+//   console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
+//   storage.removeItem('Пролонгер');
+//   console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+
+
+// ============TASK7============
+
+// function StringBuilder (baseValue){
+//     this.value = baseValue};
+    
+//     StringBuilder.prototype.getValue = function () {
+//     return this.value};
+    
+//     StringBuilder.prototype.padStart = function (str) {
+//       const arr = this.value.split();
+//       arr.unshift(str);
+//       return this.value = arr.join('');
+//     };
+    
+//     StringBuilder.prototype.padEnd = function (str) {
+//       const arr = this.value.split();
+//       arr.push(str);
+//       return this.value = arr.join('');
+//     };
+    
+//     StringBuilder.prototype.padBoth = function (str) {
+//       const arr = this.value.split();
+//       arr.unshift(str);
+//       arr.push(str);
+//       return this.value = arr.join('');
+//     };
+    
+//     // Пиши код выше этой строки
+//     const builder = new StringBuilder('.');
+//     console.log(builder.getValue()); // '.'
+//     builder.padStart('^');
+//     console.log(builder.getValue()); // '^.'
+//     builder.padEnd('^');
+//     console.log(builder.getValue()); // '^.^'
+//     builder.padBoth('=');
+//     console.log(builder.getValue()); // '=^.^='
+
+// ============TASK8============
+// class Car {}
+
+// ============TASK9============
+// class Car {
+//     constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//     }
+//   }
+  
+
+// ============TASK10===========
+// class Car {
+//     constructor({ brand, model, price }) {
+//       this.brand = brand;
+//       this.model = model;
+//       this.price = price;
+//     }
+    
+//     getPrice(price) {
+//     return this.price}
+    
+//     changePrice(newPrice) {
+//     this.price = newPrice}
+//   }
+  
+
+// ============TASK11===========
+// class Car {
+//     #brand;
+    
+//     constructor({ brand, model, price }) {
+//       this.#brand = brand;
+//       this.model = model;
+//       this.price = price;
+//     }
+    
+//     getBrand (brand) {
+//       return this.#brand;
+//     }
+    
+//     changeBrand(newBrand){
+//     this.#brand = newBrand;}
+//   }
+
+// ============TASK12===========
+// class Storage {
+//     #items
+    
+//     constructor (items){
+//       this.#items = items;
+//     }
+   
+  
+//   getItems (items) {
+//     return this.#items;
+//   };
+  
+//   addItem (newItem) {
+//     this.#items.push(newItem);
+//   };
+  
+//   removeItem (item) {
+//     const itemIndex = this.#items.indexOf(item);
+//     this.#items.splice(itemIndex, 1);
+//   };
+//   }
+  
+//   // Пиши код выше этой строки
+//   const storage = new Storage(["Нанитоиды", "Пролонгер", "Антигравитатор"]);
+//   console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор"]
+//   storage.addItem("Дроид");
+//   console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
+//   storage.removeItem("Пролонгер");
+//   console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
+
+// ============TASK13===========
+// class StringBuilder {
+//     #value
+    
+//     constructor (baseValue) {
+//     this.#value = baseValue;
+//   }
+  
+//   getValue () {
+//     return this.#value;
+//   };
+  
+//   padEnd (str) {
+//     this.#value += str;
+//   };
+  
+//   padStart (str) {
+//     this.#value = str + this.#value;
+//   };
+  
+//   padBoth (str) {
+//     this.padStart(str);
+//     this.padEnd(str);
+//   };
+//   };
+//   // Пиши код выше этой строки
+//   const builder = new StringBuilder('.');
+//   console.log(builder.getValue()); // '.'
+//   builder.padStart('^');
+//   console.log(builder.getValue()); // '^.'
+//   builder.padEnd('^');
+//   console.log(builder.getValue()); // '^.^'
+//   builder.padBoth('=');
+//   console.log(builder.getValue()); // '=^.^='
+
+// ============TASK14===========
+// class Car {
+//     #model;
+//     #price;
+//     #brand;
+  
+//     constructor({ brand, model, price }) {
+//       this.#brand = brand;
+//       this.#model = model;
+//       this.#price = price;
+//     }
+  
+//     get brand() {
+//       return this.#brand;
+//     }
+  
+//     set brand(newBrand) {
+//       this.#brand = newBrand;
+//     }
+  
+//     get model() {
+//       return this.#model;
+//     }
+  
+//     set model(newModel) {
+//       this.#model = newModel;
+//     }
+  
+//     get price() {
+//       return this.#price;
+//     }
+  
+//     set price(newPrice) {
+//       this.#price = newPrice;
+//     }
+//   }
+  
+
+// ============TASK15===========
+// class Car {
+//     // Пиши код ниже этой строки
+//     static MAX_PRICE = 50000;
+//     #price;
+  
+//     constructor({ price }) {
+//       this.#price = price;
+//     }
+  
+//     get price() {
+//       return this.#price;
+//     }
+  
+//     set price(newPrice) {
+     
+//       if (newPrice > Car.MAX_PRICE){
+//       return this.#price;
+//       }
+//       return this.#price = newPrice;
+      
+//     }
+//     // Пиши код выше этой строки
+//   }
+  
+//   const audi = new Car({price: 35000});
+//   console.log(audi.price); // 35000
+  
+//   audi.price = 49000;
+//   console.log(audi.price); // 49000
+  
+//   audi.price = 51000;
+//   console.log(audi.price); // 49000
+
+// ============TASK16===========
+// class Car {
+//     static #MAX_PRICE = 50000;
+//     // Пиши код ниже этой строки
+//     static checkPrice(price){
+//       if (price > Car.#MAX_PRICE)
+//       { return 'Внимание! Цена превышает допустимую.'
+//       }
+//       return 'Всё хорошо, цена в порядке.'
+//     }
+//     // Пиши код выше этой строки
+//     constructor({ price }) {
+//       this.price = price;
+//     }
+//   }
+  
+//   const audi = new Car({ price: 36000 });
+//   const bmw = new Car({ price: 64000 });
+  
+//   console.log(Car.checkPrice(audi.price)); // Всё хорошо, цена в порядке.
+//   console.log(Car.checkPrice(bmw.price)); // Внимание! Цена превышает допустимую.
+
+// ============TASK17===========
+// class User {
+//     email;
+  
+//     constructor(email) {
+//       this.email = email;
+//     }
+  
+//     get email() {
+//       return this.email;
+//     }
+  
+//     set email(newEmail) {
+//       this.email = newEmail;
+//     }
+//   }
+//   // Пиши код ниже этой строки
+  
+//   class Admin extends User {
+//   static AccessLevel = { BASIC: 'basic', SUPERUSER: 'superuser' }
+//   }
+
+// ============TASK18===========
+// class User {
+//     email;
+  
+//     constructor(email) {
+//       this.email = email;
+//     }
+  
+//     get email() {
+//       return this.email;
+//     }
+  
+//     set email(newEmail) {
+//       this.email = newEmail;
+//     }
+//   }
+  
+//   class Admin extends User {
+//     // Пиши код ниже этой строки
+//   accessLevel;
+//     static AccessLevel = {
+//       BASIC: 'basic',
+//       SUPERUSER: 'superuser'
+//     };
+    
+//     constructor ({email, accessLevel}){
+//     super(email);
+//     this.accessLevel = accessLevel;
+//     }
+  
+//     // Пиши код выше этой строки
+//   }
+  
+//   const mango = new Admin({
+//     email: 'mango@mail.com',
+//     accessLevel: Admin.AccessLevel.SUPERUSER
+//   });
+  
+//   console.log(mango.email); // mango@mail.com
+//   console.log(mango.accessLevel); // superuser
+
+// ============TASK19===========
+// class User {
+//     email;
+  
+//     constructor(email) {
+//       this.email = email;
+//     }
+  
+//     get email() {
+//       return this.email;
+//     }
+  
+//     set email(newEmail) {
+//       this.email = newEmail;
+//     }
+//   }
+//   class Admin extends User {
+//     // Пиши код ниже этой строки
+    
+//     static AccessLevel = {
+//       BASIC: 'basic',
+//       SUPERUSER: 'superuser'
+//     };
+//     blacklistedEmails = [];
+//     accessLevel;
+  
+//     constructor({ email, accessLevel }) {
+//       super(email);
+//       this.accessLevel = accessLevel;
+//     }
+//      blacklist(email){
+//        this.blacklistedEmails.push(email);
+//     }
+    
+//      isBlacklisted(email){
+       
+//        return this.blacklistedEmails.includes(email)
+//      }
+//     // Пиши код выше этой строки
+//   }
+  
+//   const mango = new Admin({
+//     email: 'mango@mail.com',
+//     accessLevel: Admin.AccessLevel.SUPERUSER
+//   });
+  
+//   console.log(mango.email); // mango@mail.com
+//   console.log(mango.accessLevel); // superuser
+//   mango.blacklist('poly@mail.com');
+//   console.log(mango.blacklistedEmails); // 'poly@mail.com'
+//   console.log(mango.isBlacklisted('mango@mail.com')); //  false
+//   console.log(mango.isBlacklisted('poly@mail.com')); // true 
+
+
+// ============Module6===========
+
+// ============TASK1============
+// ============TASK2============
+// ============TASK3============
+// ============TASK4============
+// ============TASK5============
+// ============TASK6============
+// ============TASK7============
 // ============TASK8============
 // ============TASK9============
 // ============TASK10===========
+// ============TASK11===========
+// ============TASK12===========
+// ============TASK13===========
+// ============TASK14===========
+// ============TASK15===========
+// ============TASK16===========
+// ============TASK17===========
+// ============TASK18===========
+// ============TASK19===========
+// ============TASK20===========
+// ============TASK21===========
+// ============TASK22===========
+// ============TASK23===========
+// ============TASK24===========
+// ============TASK25===========
+// ============TASK26===========
+// ============TASK27===========
+// ============TASK28===========
+// ============TASK29===========
+// ============TASK30===========
+// ============TASK31===========
+// ============TASK32===========
+// ============TASK33===========
+// ============TASK34===========
+// ============TASK35===========
+// ============TASK36===========
+// ============TASK37===========
+// ============TASK38===========
+// ============TASK39===========
+// ============TASK40===========
+// ============TASK41===========
+// ============TASK42===========
+// ============TASK43===========
+// ============TASK44===========
 
 
-// ============Module5===========
+// ============Module7===========
 
 // ============TASK1============
 // ============TASK2============
