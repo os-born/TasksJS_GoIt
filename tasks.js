@@ -2082,7 +2082,19 @@
 // ============Module6===========
 
 // ============TASK1============
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Пиши код ниже этой строки
+  
+//   orderedItems.forEach(function odd(item) {totalPrice += item})
+
+//     // Пиши код выше этой строки
+//   return totalPrice;
+// }
+
 // ============TASK2============
+
+
 // ============TASK3============
 // ============TASK4============
 // ============TASK5============
